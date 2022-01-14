@@ -1,0 +1,132 @@
+$ cd ~
+
+$ cd Downloads/CSB-master/unix/data/Saavedra2013
+
+##[Dirigir al directorio donde se encuenta el archivo de Saavedra2013]
+
+$ Roycod@DESKTOP-5T09SJJ MINGW64 ~/Downloads/CSB-master/unix/data/Saavedra2013
+
+$ ls
+
+n1.txt   n16.txt  n22.txt  n29.txt  n35.txt  n41.txt  n48.txt  n54.txt  n7.txt
+n10.txt  n17.txt  n23.txt  n3.txt   n36.txt  n42.txt  n49.txt  n55.txt  n8.txt
+n11.txt  n18.txt  n24.txt  n30.txt  n37.txt  n43.txt  n5.txt   n56.txt  n9.txt
+n12.txt  n19.txt  n25.txt  n31.txt  n38.txt  n44.txt  n50.txt  n57.txt
+n13.txt  n2.txt   n26.txt  n32.txt  n39.txt  n45.txt  n51.txt  n58.txt
+n14.txt  n20.txt  n27.txt  n33.txt  n4.txt   n46.txt  n52.txt  n59.txt
+n15.txt  n21.txt  n28.txt  n34.txt  n40.txt  n47.txt  n53.txt  n6.txt
+
+$ cd
+
+$ nano ejercicio_1103.sh
+
+ #!/bin/bash
+ Ikiam=Downloads/CSB-master/unix/data/Saavedra2013/n15.txt
+ for I in $Ikiam
+ do
+ echo "Name:"
+ echo $I
+ echo "Filas:"
+ cat $I | wc -l
+ echo "Columnas:"
+ head -n 1 $I | tr -d ' ' | tr -d '\n' | wc -c
+ done
+
+$ bash ejercicio_1103.sh
+ #Name:
+  Downloads/CSB-master/unix/data/Saavedra2013/n15.txt
+ #Filas:
+  38
+ #Columnas:
+  11
+
+## Parte 2
+
+Roycod@DESKTOP-5T09SJJ MINGW64 ~/Downloads/CSB-master/unix/data/Saavedra2013
+$cd
+
+Roycod@DESKTOP-5T09SJJ MINGW64 ~ 
+
+$ nano ejercicio_1103.sh 
+
+ #!/bin/bash
+ Ikiam=Downloads/CSB-master/unix/data/Saavedra2013/*.txt
+ for I in $Ikiam
+ do
+ Fil=`cat $I | wc -l`
+ Col=`head -n 1 $I | tr -d ' ' | tr -d '\n' | wc -c`
+ echo $I $Fil $Col
+ done
+
+$ bash ejercicio_1103.sh
+
+tarea.sh: line 1: x#!/bin/bash: No such file or directory
+Downloads/CSB-master/unix/data/Saavedra2013/n1.txt 97 80
+Downloads/CSB-master/unix/data/Saavedra2013/n10.txt 14 20
+Downloads/CSB-master/unix/data/Saavedra2013/n11.txt 270 91
+Downloads/CSB-master/unix/data/Saavedra2013/n12.txt 7 72
+Downloads/CSB-master/unix/data/Saavedra2013/n13.txt 61 17
+Downloads/CSB-master/unix/data/Saavedra2013/n14.txt 35 15
+Downloads/CSB-master/unix/data/Saavedra2013/n15.txt 38 11
+Downloads/CSB-master/unix/data/Saavedra2013/n16.txt 118 24
+Downloads/CSB-master/unix/data/Saavedra2013/n17.txt 76 31
+Downloads/CSB-master/unix/data/Saavedra2013/n18.txt 13 14
+Downloads/CSB-master/unix/data/Saavedra2013/n19.txt 10 16
+Downloads/CSB-master/unix/data/Saavedra2013/n2.txt 62 41
+Downloads/CSB-master/unix/data/Saavedra2013/n20.txt 18 7
+Downloads/CSB-master/unix/data/Saavedra2013/n21.txt 19 45
+Downloads/CSB-master/unix/data/Saavedra2013/n22.txt 19 36
+Downloads/CSB-master/unix/data/Saavedra2013/n23.txt 179 26
+Downloads/CSB-master/unix/data/Saavedra2013/n24.txt 80 28
+Downloads/CSB-master/unix/data/Saavedra2013/n25.txt 17 16
+Downloads/CSB-master/unix/data/Saavedra2013/n26.txt 82 40
+Downloads/CSB-master/unix/data/Saavedra2013/n27.txt 27 5
+Downloads/CSB-master/unix/data/Saavedra2013/n28.txt 90 19
+Downloads/CSB-master/unix/data/Saavedra2013/n29.txt 61 25
+Downloads/CSB-master/unix/data/Saavedra2013/n3.txt 25 36
+Downloads/CSB-master/unix/data/Saavedra2013/n30.txt 8 19
+Downloads/CSB-master/unix/data/Saavedra2013/n31.txt 28 25
+Downloads/CSB-master/unix/data/Saavedra2013/n32.txt 45 21
+Downloads/CSB-master/unix/data/Saavedra2013/n33.txt 70 20
+Downloads/CSB-master/unix/data/Saavedra2013/n34.txt 79 25
+Downloads/CSB-master/unix/data/Saavedra2013/n35.txt 14 8
+Downloads/CSB-master/unix/data/Saavedra2013/n36.txt 40 169
+Downloads/CSB-master/unix/data/Saavedra2013/n37.txt 44 13
+Downloads/CSB-master/unix/data/Saavedra2013/n38.txt 51 99
+Downloads/CSB-master/unix/data/Saavedra2013/n39.txt 33 25
+Downloads/CSB-master/unix/data/Saavedra2013/n4.txt 101 11
+Downloads/CSB-master/unix/data/Saavedra2013/n40.txt 28 18
+Downloads/CSB-master/unix/data/Saavedra2013/n41.txt 12 10
+Downloads/CSB-master/unix/data/Saavedra2013/n42.txt 42 8
+Downloads/CSB-master/unix/data/Saavedra2013/n43.txt 55 29
+Downloads/CSB-master/unix/data/Saavedra2013/n44.txt 56 9
+Downloads/CSB-master/unix/data/Saavedra2013/n45.txt 36 61
+Downloads/CSB-master/unix/data/Saavedra2013/n46.txt 58 17
+Downloads/CSB-master/unix/data/Saavedra2013/n47.txt 139 41
+Downloads/CSB-master/unix/data/Saavedra2013/n48.txt 118 49
+Downloads/CSB-master/unix/data/Saavedra2013/n49.txt 47 23
+Downloads/CSB-master/unix/data/Saavedra2013/n5.txt 21 7
+Downloads/CSB-master/unix/data/Saavedra2013/n50.txt 45 46
+Downloads/CSB-master/unix/data/Saavedra2013/n51.txt 8 15
+Downloads/CSB-master/unix/data/Saavedra2013/n52.txt 33 7
+Downloads/CSB-master/unix/data/Saavedra2013/n53.txt 34 13
+Downloads/CSB-master/unix/data/Saavedra2013/n54.txt 126 25
+Downloads/CSB-master/unix/data/Saavedra2013/n55.txt 14 50
+Downloads/CSB-master/unix/data/Saavedra2013/n56.txt 110 207
+Downloads/CSB-master/unix/data/Saavedra2013/n57.txt 14 11
+Downloads/CSB-master/unix/data/Saavedra2013/n58.txt 678 90
+Downloads/CSB-master/unix/data/Saavedra2013/n59.txt 663 130
+Downloads/CSB-master/unix/data/Saavedra2013/n6.txt 9 31
+Downloads/CSB-master/unix/data/Saavedra2013/n7.txt 16 25
+Downloads/CSB-master/unix/data/Saavedra2013/n8.txt 19 33
+Downloads/CSB-master/unix/data/Saavedra2013/n9.txt 12 22
+
+## Parte 3 
+
+$ bash ejercicio_1103.sh | sort -n -r -k 2 | head -n 1
+
+ #Downloads/CSB-master/unix/data/Saavedra2013/n58.txt 678 90
+
+$ bash ejercicio_1103.sh | sort -n -r -k 3 | head -n 1
+
+ #Downloads/CSB-master/unix/data/Saavedra2013/n58.txt 110 207
