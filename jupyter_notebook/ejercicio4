@@ -130,3 +130,6 @@ $ bash ejercicio_1103.sh | sort -n -r -k 2 | head -n 1
 $ bash ejercicio_1103.sh | sort -n -r -k 3 | head -n 1
 
  #Downloads/CSB-master/unix/data/Saavedra2013/n58.txt 110 207
+
+
+##
