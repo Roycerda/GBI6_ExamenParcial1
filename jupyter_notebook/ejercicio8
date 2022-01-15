@@ -1,0 +1,11 @@
+lista1 = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "J"]
+
+print(lista1[2:5])
+
+print(lista1.append(["gbi6", "bio1", "ikiam"]))
+print(len(lista1))
+      
+print(lista1.append(["gbi6", "bio1", "ikiam"]))
+print(lista1[-1][-1])
+
+print(lista1[3])
